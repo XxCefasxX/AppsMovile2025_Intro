@@ -34,6 +34,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
 
 class ComtrolesBasicos : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -107,6 +108,18 @@ fun ImageTest(){
 fun ColumnTest(){
     Column() {  }
 }
+@Composable
+fun BotonContador(){
+//    var contador by rememberSaveable  { mutableStateOf(0) }
+    var contador by remember { mutableStateOf(0) }
+    Column {
+        Button(onClick = {contador++}) { Text("+") }
+        Button(onClick = {contador--}) { Text("-") }
+        Text(contador.toString())
+    }
+
+}
+
 @Composable
 fun BotonSaludo() {
     // Estado para el TextField
