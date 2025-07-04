@@ -1,5 +1,6 @@
 package com.example.appsmoviles2025
 
+import RegistroPersona
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -65,7 +66,7 @@ fun FullPage() {
 
 @Composable
 fun Contendido(modifier: Modifier = Modifier) {
-    ListaNombres()
+    RegistroPersona()
 }
 
 
@@ -247,10 +248,12 @@ fun ListasTest() {
 }
 
 
+
+
 @Composable
 fun ListaNombres() {
     //mostrar un textfield y boton que tome el valor del textfield
-    var listanombres = rememberSaveable { mutableStateListOf<String>() }
+    var listanombres = remember { mutableStateListOf<String>() }
 
     var name by remember { mutableStateOf("") }
     Column() {
