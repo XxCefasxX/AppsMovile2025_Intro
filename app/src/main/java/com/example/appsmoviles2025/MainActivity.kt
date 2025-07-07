@@ -1,5 +1,6 @@
 package com.example.appsmoviles2025
 
+import PeliculasNavGraph
 import RegistroPersona
 import android.os.Bundle
 import android.widget.Toast
@@ -38,6 +39,7 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.appsmoviles2025.ui.theme.AppsMoviles2025Theme
+import navegacion
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -66,7 +68,7 @@ fun FullPage() {
 
 @Composable
 fun Contendido(modifier: Modifier = Modifier) {
-    RegistroPersona()
+    PeliculasNavGraph()
 }
 
 
